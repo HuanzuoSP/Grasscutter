@@ -1084,7 +1084,7 @@ public class Player {
 	@PostLoad
 	private void onLoad() {
 		this.getTeamManager().setPlayer(this);
-		this.getTowerManager().setPlayer(this);
+//		this.getTowerManager().setPlayer(this);
 	}
 
 	public void save() {
@@ -1099,10 +1099,10 @@ public class Player {
 		if (this.getProfile().getUid() == 0) {
 			this.getProfile().syncWithCharacter(this);
 		}
-		if (this.getTowerManager() == null) {
+/*		if (this.getTowerManager() == null) {
 			this.towerManager = new TowerManager(this);
 		}
-
+*/
 		// Check if player object exists in server
 		// TODO - optimize
 		Player exists = this.getServer().getPlayerByUid(getUid());
